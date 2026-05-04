@@ -1,13 +1,204 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* 🌐 APP */
+.app {
+  min-height: 100vh;
+  background: #f4f6f8;
+  color: #222;
+  padding: 30px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.dark {
+  background: #111827;
+  color: white;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* 🔝 HEADER */
+.header,
+.controls,
+.form,
+.pagination {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* 🧾 INPUTS */
+input,
+select,
+button {
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+button {
+  cursor: pointer;
+  background: #2563eb;
+  color: white;
+  border: none;
+}
+
+button:disabled {
+  background: gray;
+}
+
+/* 📋 FORM */
+.form {
+  background: white;
+  padding: 12px;
+  border-radius: 10px;
+}
+
+.dark .form {
+  background: #1f2937;
+}
+
+/* 👥 USERS GRID */
+.user-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+}
+
+.user-card {
+  background: white;
+  color: #222;
+  padding: 14px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+}
+
+.dark .user-card {
+  background: #1f2937;
+  color: white;
+}
+
+.card-buttons {
+  display: flex;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+/* ⚠️ MESSAGE */
+.message {
+  font-size: 16px;
+  margin: 15px 0;
+}
+
+.error {
+  color: red;
+}
+
+/* 🪟 MODAL */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-box {
+  background: white;
+  color: black;
+  padding: 20px;
+  border-radius: 12px;
+  width: 300px;
+}
+
+/* 📄 PAGINATION */
+.pagination {
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* ===================================== */
+/* ⏰ ANALOG CLOCK (SMALL SIZE) */
+/* ===================================== */
+
+.clock-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 🕒 CLOCK BODY */
+.analog-clock {
+  width: 100px;   /* 🔥 small size */
+  height: 100px;
+  border: 5px solid #111;
+  border-radius: 50%;
+  position: relative;
+  background: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* 🔢 NUMBERS */
+.clock-number {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.clock-number span {
+  display: inline-block;
+  margin-top: 4px;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+/* 🕹 HANDS */
+.hand {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform-origin: bottom center;
+  border-radius: 10px;
+}
+
+.hour-hand {
+  width: 4px;
+  height: 25px;
+  background: #111;
+  margin-left: -2px;
+}
+
+.minute-hand {
+  width: 3px;
+  height: 35px;
+  background: #2563eb;
+  margin-left: -1.5px;
+}
+
+.second-hand {
+  width: 2px;
+  height: 40px;
+  background: red;
+  margin-left: -1px;
+}
+
+/* 🔵 CENTER DOT */
+.center-dot {
+  width: 8px;
+  height: 8px;
+  background: #111;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* 🌙 DARK MODE CLOCK */
+.dark .analog-clock {
+  background: #f9fafb;
 }
