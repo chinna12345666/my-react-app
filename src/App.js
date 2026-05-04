@@ -5,7 +5,7 @@ function App() {
   return (
     <div>
       <Comp1/>
-      
+      Hiii
     </div>
   )
 }
